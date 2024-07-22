@@ -368,13 +368,13 @@ class BatchTokenizer(BatchProcessor[str]):
 
         # HF's BPE-based tokenizers do not, but the bert and roberta ones do
         # TODO: this doesn't necessarily ensure it, I guess, but eh
-        if enforce_eos or enforce_bos:
-            input_ids = tokenizer("hi there")["input_ids"]
-            should_append_eos = input_ids[-1] != tokenizer.eos_token_id and enforce_eos
-            should_append_bos = input_ids[0] != tokenizer.bos_token_id and enforce_bos
-        else:
-            should_append_eos = False
-            should_append_bos = False
+        # if enforce_eos or enforce_bos:
+        #     input_ids = tokenizer("hi there")["input_ids"]
+        #     should_append_eos = input_ids[-1] != tokenizer.eos_token_id and enforce_eos
+        #     should_append_bos = input_ids[0] != tokenizer.bos_token_id and enforce_bos
+        # else:
+        should_append_eos = False
+        should_append_bos = False
 
         self._batch_size = batch_size
 
