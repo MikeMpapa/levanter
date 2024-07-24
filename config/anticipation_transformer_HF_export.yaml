@@ -1,0 +1,16 @@
+model:
+  type: gpt2
+  hidden_dim: 1024
+  num_heads: 16
+  num_layers: 24
+  seq_len: 1024
+  scale_attn_by_inverse_layer_idx: true
+  gradient_checkpointing: true
+  use_flash_attention: false
+
+override_vocab_size: 55028
+output_dir: /levanter/checkpoints/hf_202407_midi_test_files
+checkpoint_path: /levanter/checkpoints/bcr0x5bk
+save_tokenizer: true
+upload_to_hf: MikeMpapa/test_anticipation
+create_repo: true
