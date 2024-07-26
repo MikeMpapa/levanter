@@ -13,4 +13,3 @@ output_dir: /levanter/checkpoints/hf_202407_midi_test_files
 checkpoint_path: /levanter/checkpoints/bcr0x5bk
 save_tokenizer: true
 upload_to_hf: MikeMpapa/test_anticipation
-create_repo: true
